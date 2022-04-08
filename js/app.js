@@ -29,7 +29,13 @@ function failFunction(error){
   console.log(error);
 }
 
+function randomize(){
+  document.getElementById('activity');
+}
+
 document.getElementById('activity').addEventListener('click', playerSelector); 
+document.getElementById('randomizer').addEventListener('click', playerSelector); 
+
 
 // where does .then/.catch go? They go after the axios request, does that mean each axios needs it's own then/catch? and does each requestion also need it's own success/fail function? or should i have the 
 // I know that with the else/if that numUsers == x doesnt work, but is everything else going to work? 
