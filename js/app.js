@@ -18,7 +18,7 @@ function playerSelector(){
   }
 }
 
-// if the API was successful the data from activity is logged into the console and displayed on the webpage. response.data.activity will display the activity, response shows the data block
+// if the API was successful the data from activity is logged into the console and displayed on the webpage. Each set of data about the activity is linked to a corrosponding HTML element.
 function successFunction(response){
   console.log(response);
   console.log(response.data.activity);
