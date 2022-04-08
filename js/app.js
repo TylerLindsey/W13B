@@ -18,10 +18,17 @@ function playerSelector(){
   }
 }
 
-// if the API was successful the data from activity is logged into the console and displayed on the webpage.
+// if the API was successful the data from activity is logged into the console and displayed on the webpage. response.data.activity will display the activity, response shows the data block
 function successFunction(response){
+  console.log(response);
   console.log(response.data.activity);
-  document.getElementById('answer').innerHTML = response.data.activity;
+  document.getElementById('answer').innerHTML = response.data.accessibility;
+  document.getElementById('activity').innerHTML = response.data.activity;
+  document.getElementById('key').innerHTML = response.data.key;
+  document.getElementById('link').innerHTML = response.data.link;
+  document.getElementById('participants').innerHTML = response.data.participants;
+  document.getElementById('price').innerHTML = response.data.price;
+  document.getElementById('type').innerHTML = response.data.type;
 }
 
 function failFunction(error){
@@ -29,5 +36,5 @@ function failFunction(error){
 }
 
 // to make it so the user can just 'reroll' an activity I just linked the same event to a different button. So both buttons are connected to the same event.
-document.getElementById('activity').addEventListener('click', playerSelector); 
+document.getElementById('activityBtn').addEventListener('click', playerSelector); 
 document.getElementById('randomizer').addEventListener('click', playerSelector); 
